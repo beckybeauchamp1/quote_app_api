@@ -22,10 +22,7 @@ ActiveRecord::Schema.define(version: 20160312144505) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "quote_id"
   end
-
-  add_index "categories", ["quote_id"], name: "index_categories_on_quote_id", using: :btree
 
   create_table "favorites", force: :cascade do |t|
     t.integer  "user_id"
@@ -36,12 +33,15 @@ ActiveRecord::Schema.define(version: 20160312144505) do
 
   create_table "quotes", force: :cascade do |t|
     t.string   "title"
-    t.string   "text",       null: false
+    t.string   "text",        null: false
     t.string   "author"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "category_id"
   end
+
+  add_index "quotes", ["category_id"], name: "index_quotes_on_category_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",             default: "", null: false
@@ -64,5 +64,5 @@ ActiveRecord::Schema.define(version: 20160312144505) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "categories", "quotes"
+  add_foreign_key "quotes", "categories"
 end
