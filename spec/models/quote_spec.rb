@@ -32,7 +32,7 @@ end
 describe "model methods" do
   describe "find all quotes by category" do
     it "should list all of a category's quotes" do
-      expect(category.quotes.length).not_to eq(0)
+      expect(category.quotes).not_to be_nil
     end
   end
   describe "#find_by_author" do
