@@ -38,7 +38,10 @@ describe "model methods" do
   describe "#find_by_author" do
     context "when I try to find a quote by author name" do
       it "can be search by author" do
-        expect(quote.find_by_author("Einstein")).to eq("Einstein")
+        quotes = Quote.find_by_author("Einstein")
+        quotes.each do |quote|
+          expect(quote).to have_attributes(:author => "Einstein")
+        end
       end
     end
   end

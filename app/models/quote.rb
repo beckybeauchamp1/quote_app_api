@@ -4,7 +4,15 @@ class Quote < ActiveRecord::Base
   validates :title, uniqueness: true
   validates :text, uniqueness: true
 
-  def find_by_author(author_name)
-
+  # class method, searching by author name and returns and array of every object in postgres that has that author
+  def self.find_by_author(author_name)
+    quotes = []
+    Quote.find_each do |quote|
+      if quote.author == author_name
+        quotes << quote
+      end
+    end
+    return quotes
   end
+
 end
