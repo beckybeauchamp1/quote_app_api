@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20160312144505) do
   end
 
   create_table "quotes", force: :cascade do |t|
-    t.string   "title"
     t.string   "text",        null: false
     t.string   "author"
     t.integer  "user_id"

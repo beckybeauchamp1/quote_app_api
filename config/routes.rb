@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
+
+
+  get '/' => 'quotes#index'
+  get 'quotes/search/:key' => 'quotes#find_matches'
+  get 'quotes/author_search/:author' => 'quotes#find_authors'
+  resources :quotes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe Quote, :type => :model do
 
   let(:category){Category.create!(title: "Life", user_id: 4)}
-  let(:quote){Quote.create!(title: "Bike Quote", text: "Life is like riding a bike", author: "Einstein", user_id: 4, category_id: category.id)}
+  let(:quote){Quote.create!(text: "Life is like riding a bike", author: "Einstein", user_id: 4, category_id: category.id)}
 
 describe "attributes of a quote" do
   it "has the class Quote" do
@@ -11,9 +11,6 @@ describe "attributes of a quote" do
   end
   it "has a string of text" do
     expect(quote.text).to eq("Life is like riding a bike")
-  end
-  it "has a title thats a string" do
-    expect(quote.title).to eq("Bike Quote")
   end
   it "has an author" do
     expect(quote.author).to eq("Einstein")
@@ -44,9 +41,19 @@ describe "model methods" do
         end
       end
     end
+
+    describe "#find_by_keyword" do
+      context "when I try to find a quote by a search term" do
+        it "can be search by key word" do
+          quotes = Quote.find_by_keyword("bike")
+            quotes.each do |quote|
+              expect(quote.text).to include("bike")
+            end
+        end
+      end
+    end
+
   end
 end
-
-
 
 end
