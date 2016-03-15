@@ -33,10 +33,6 @@ class QuotesController < ApplicationController
 
   def find_authors
     @quotes = Quote.find_by_author(params[:author])
-  end
-
-  def find_authors
-    @quotes = Quote.find_by_author(params[:author])
     if @quotes.length > 0
       render status: 200, json: @quotes.to_json
     else

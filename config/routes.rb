@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users
 
-
+  # custom routes:
+  # home/root route goes to quotes index
   get '/' => 'quotes#index'
+  # route for searching by keyword
   get 'quotes/search/:key' => 'quotes#find_matches'
+  # route for searching by author
   get 'quotes/author_search/:author' => 'quotes#find_authors'
+
   resources :quotes
+
+  resources :categories 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

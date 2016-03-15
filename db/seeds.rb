@@ -17,3 +17,8 @@ quotes.each do |q|
   new_quote = Quote.create!(text: q["Quote"], author: q["Author"])
   all_quotes << new_quote
 end
+
+categories = ["Philosophy", "Art", "Life", "Science", "Religion", "Spirtual", "Funny", "Curiousity"]
+categories.each do |category|
+  Category.create!(title: category)
+end
