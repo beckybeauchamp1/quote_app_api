@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'rack-cors', :require => 'rack/cors'
 # Helps facilitate User Authenticaiton by using Sessions
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

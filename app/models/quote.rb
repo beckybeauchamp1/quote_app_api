@@ -7,9 +7,9 @@ class Quote < ActiveRecord::Base
   def self.find_by_author(author_name)
     quotes = []
     Quote.find_each do |quote|
-      if quote.author == author_name
+      if quote.author == author_name.capitalize
         quotes << quote
-      elsif quote.author.match(/#{author_name}/) != nil
+      elsif quote.author.match(/#{author_name.capitalize}/) != nil
         quotes << quote
       end
     end

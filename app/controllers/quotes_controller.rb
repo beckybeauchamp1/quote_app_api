@@ -1,6 +1,7 @@
 class QuotesController < ApplicationController
   def index
-    @quotes = Quote.all
+    @quotes = Quote.order("RANDOM()")
+    @quotes = @quotes.limit(20)
     render status: 200, json: @quotes
   end
 
