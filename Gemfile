@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'pry'
+
 gem 'rack-cors', :require => 'rack/cors'
 # Helps facilitate User Authenticaiton by using Sessions
 gem 'devise'

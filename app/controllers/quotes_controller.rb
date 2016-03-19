@@ -1,7 +1,7 @@
 class QuotesController < ApplicationController
   def index
     @quotes = Quote.order("RANDOM()")
-    @quotes = @quotes.limit(20)
+    @quotes = @quotes.limit(10)
     render status: 200, json: @quotes
   end
 
@@ -34,6 +34,7 @@ class QuotesController < ApplicationController
 
   def find_authors
     @quotes = Quote.find_by_author(params[:author])
+    puts(params[:author])
     if @quotes.length > 0
       render status: 200, json: @quotes.to_json
     else
