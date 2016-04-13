@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'quotes/:id/categories' => 'quotes#categories'
   get 'quotes/favorites' => 'favorites#index'
   post 'quotes/favorites/new' => 'favorites#create'
+  post '//auth' => 'devise_token_auth/registrations#create'
   resources :quotes
 
   resources :categories

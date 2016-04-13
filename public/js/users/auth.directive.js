@@ -16,6 +16,8 @@
           scope.currentUser = false;
         });
         scope.$on('auth:registration-email-success', function(ev, user) {
+          console.log(user);
+          console.log("Email")
           scope.currentUser = user;
         });
 

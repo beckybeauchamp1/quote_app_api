@@ -66,7 +66,7 @@
 
   function AuthConfigFunction($authProvider) {
     $authProvider.configure({
-      apiUrl: "https://beckys-quote-app.herokuapp.com/"
+      apiUrl: "http://localhost:3000/"
     });
   }
 

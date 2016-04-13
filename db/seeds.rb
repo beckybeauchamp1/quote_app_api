@@ -25,8 +25,8 @@ categories.each do |category|
   Category.create!(title: category)
 end
 
-usr1 = User.create!(email:'beckyb@example.com', password:'test12345')
-usr2 = User.create!(email:'beckybeau@example.com', password:'pizzajammy')
+usr1 = User.create!(first_name: 'Becky', last_name: 'Beauchamp', email:'beckyb@example.com', password:'test12345')
+usr2 = User.create!(first_name: 'Becky', last_name: 'Beauchamp',email:'beckybeau@example.com', password:'pizzajammy')
 
 
 usr1.favorites.create!({quote: all_quotes[0]});

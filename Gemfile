@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'devise_token_auth'
+gem "devise_token_auth", ">= 0.1.32.beta9"
 
 gem 'omniauth'
 

@@ -196,7 +196,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
-  devise_token_auth
+  devise_token_auth (>= 0.1.32.beta9)
   jbuilder (~> 2.0)
   jquery-rails
   omniauth

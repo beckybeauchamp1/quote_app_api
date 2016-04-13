@@ -10,7 +10,7 @@ console.log('factory');
   ]);
 
   function QuoteFactoryFunction($resource){
-    return $resource("https://beckys-quote-app.herokuapp.com/quotes/:id", {},
+    return $resource("http://localhost:3000/quotes/:id", {},
     {
       update: {
         method: "PUT"
@@ -20,7 +20,7 @@ console.log('factory');
         params:{
           keyword: '@keyword'
         },
-        url: "https://beckys-quote-app.herokuapp.com/quotes/search/:keyword",
+        url: "http://localhost:3000/quotes/search/:keyword",
         isArray: true
       },
       category: {
@@ -28,7 +28,7 @@ console.log('factory');
         params:{
           category: '@category'
         },
-        url: "https://beckys-quote-app.herokuapp.com/categories",
+        url: "http://localhost:3000/categories",
         isArray: true,
       },
       addCategory:{
@@ -37,7 +37,7 @@ console.log('factory');
           quote: '@quote',
           category: '@category'
         },
-        url: "https://beckys-quote-app.herokuapp.com/addCategory",
+        url: "http://localhost:3000/addCategory",
         isArray: true,
       },
       grabCategories:{
@@ -45,7 +45,7 @@ console.log('factory');
         params: {
           id: '@id',
         },
-        url: "https://beckys-quote-app.herokuapp.com/quotes/:id/categories",
+        url: "http://localhost:3000/quotes/:id/categories",
         isArray: true,
         stripTrailingSlashes: false
       },
@@ -55,7 +55,7 @@ console.log('factory');
           quote: '@quote',
           category: '@category'
         },
-        url: "https://beckys-quote-app.herokuapp.com/quotes/favorites/new"
+        url: "http://localhost:3000/quotes/favorites/new"
       }
     });
   }

@@ -9,7 +9,7 @@
   ]);
 
   function UserFactoryFunction($resource){
-    return $resource("https://beckys-quote-app.herokuapp.com/quotes/favorites", {},
+    return $resource("http://localhost:3000/quotes/favorites", {},
     {
       update: {
         method: "PUT"

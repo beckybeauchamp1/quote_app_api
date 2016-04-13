@@ -4,6 +4,7 @@
   .controller("SessionsController", function($auth, $state, $scope){
     console.log("ksndfasjknf")
     this.signinForm = {};
+    this.signupForm = {};
     this.signin = function() {
       $auth.submitLogin(this.signinForm)
       .then(function(resp) {
@@ -16,6 +17,7 @@
     };
 
     this.signup = function() {
+      console.log("signingup ")
       $auth.submitRegistration(this.signupForm)
       .then(function(resp) {
         $state.go('quoteIndex');
