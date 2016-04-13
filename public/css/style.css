@@ -1,0 +1,228 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0 auto;
+  background-image: url("forest.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: black;
+  text-align: center;
+  min-height: 1500px;
+  font-family: "Raleway";
+}
+nav{
+  height: 80px;
+  background-color: rgba(0,0,0, 0.1);
+}
+.main-nav{
+  list-style-type: none;
+}
+/*index.html search input and div*/
+.search {
+  display: inline;
+  height: 40px;
+  font-size: 20px;
+}
+.search-input{
+  width: 40%;
+  font-size: 20px;
+}
+/*li css and pseudo selectors*/
+li{
+  font-size: 28px;
+  margin-right: 30px;
+  font-weight: bold;
+  font-family: 'Quicksand';
+  display: inline;
+}
+li:hover{
+  color: rgba(102, 136, 153, 0.6);
+}
+li .fa-home{
+  font-size: 40px;
+}
+h1{
+  font-size: 200px;
+  margin-top: 40px;
+  color: black;
+  font-family: "Amatic SC";
+  text-shadow: 2px 2px rgba(0,0,0,0.4);
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+}
+/*originally for link to see featured quotes*/
+.quote-index-link{
+  color: black;
+  font-style: bold;
+  background: rgba(0,0,0,0.2);
+  height: 80px;
+  border: none;
+  font-size: 40px;
+}
+.quote-index-link:hover{
+  background: rgba(102, 136, 153, 0.6);
+  color: black;
+  box-shadow: inset 0 0 1em lemonchiffon;
+}
+/*css for index.html template for quotes*/
+.main-home-div{
+  transition: background-color 0.9s ease;
+  border-radius: 10%;
+  background: rgba(0,0,0,0.4);
+  width: 80%;
+  height: 1000px;
+  margin: 0 auto;
+  color: white;
+  box-shadow: 10px 5px 5px black;
+}
+.main-home-div:hover{
+  background-color: rgba(0,0,0,0.8);
+}
+/*css for children div and links for index.html template for quotes*/
+.main-home-div div{
+  margin-top: 30px;
+  display: inline-table;
+  width: 30%;
+  font-size: 25px;
+  font-weight: bold;
+}
+.main-home-div a{
+  transition: color 0.5s ease;
+  color: white;
+}
+.main-home-div a:hover{
+  color: rgba(182, 191, 63, 0.79);
+  text-decoration: none;
+}
+/*css for index.html template for categories*/
+.main-categories-div{
+  background: rgba(0,0,0,0.4);
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+  color: white;
+  box-shadow: 10px 5px 5px black;
+}
+/*css for index.html template for children button for categories*/
+.category-button {
+  margin: 10px;
+  font-size: 26px;
+  color: black;
+}
+.category-button:hover{
+  border: 1px solid lemonchiffon;
+}
+.category-list{
+  display: inline;
+}
+main{
+  height: 1500px;
+}
+footer{
+  background-color: rgba(0,0,0,0.7);
+  height: 600px;
+  color: white;
+  font-size: 40px;
+  font-family: 'Quicksand';
+}
+.footer{
+  margin-top: 200px;
+}
+.footer h2{
+  font-size: 35px;
+}
+.footer-list a{
+  margin: 30px;
+  color: white;
+  font-size: 100px;
+}
+.footer-list a:hover{
+  color: lemonchiffon;
+}
+/*filter input div index page*/
+.filter-input-div{
+  margin-bottom: 20px;
+}
+
+.results-button{
+  display: inline;
+  margin: 10px;
+}
+.show-quote{
+  background: rgba(0,0,0,0.3);
+  transition: background-color 0.9s ease;
+  color: white;
+  height: 900px;
+  font-size: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+.show-header{
+  padding-top: 100px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+.show-quote:hover{
+  background-color: rgba(0,0,0,0.8);
+}
+.quote-drag{
+  padding-top: 80px;
+  padding-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.toggle-modal{
+  transition: background-color 0.10s ease;
+  margin: 0 auto;
+  margin-left: 20px;
+  font-size: 28px;
+  margin-top: 40px;
+}
+.toggle-modal:hover{
+  color: rgba(182, 191, 10, 0.79);
+}
+.modal-content{
+  height: 500px;
+  padding-top: 200px;
+}
+.sign-in{
+  background-color: rgba(0,0,0,0.8);
+  -moz-box-shadow: 0 0 5px 5px black;
+  -webkit-box-shadow: 0 0 5px 5px black;
+  box-shadow: 0 0 5px 5px black;
+  height: 600px;
+}
+.sign-in div{
+  padding-top: 30px;
+}
+.sign-in label{
+  font-size: 30px;
+  color: white;
+}
+.sign-in div input{
+  height: 40px;
+  width: 25%;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 30px;
+}
+.well{
+  background-color: rgba(0,0,0,0);
+  height: 300px;
+  border: none;
+}
+.well button{
+  transition: background-color 0.9s ease;
+  margin-top: 20px;
+}
+.well button:hover{
+  background-color: lemonchiffon;
+}

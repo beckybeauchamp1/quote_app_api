@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 filter-input-div">
+    <input type="text" data-ng-model="searchWord" class="form-control search search-input" placeholder="Search to see more...">
+  </div>
+</div>
+<button class="btn btn-default results-button" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Total: {{quotes.length}}</button>
+<button class="btn btn-default results-button">Results: {{results.length}}</button>
+<button class="btn btn-default results-button">Remaining:  {{(quotes.length - results.length) || quotes.length}}</button>
+<div class="main-home-div">
+  <div data-ng-draggable class="quote-drag" data-ng-repeat="quote in quotes | filter:searchWord as results" ng-show="$index<6">
+    <p><a data-ui-sref="quoteShow({id: quote.id})">"{{quote.text}}"</a>
+    </p>
+  </div>
+</div>

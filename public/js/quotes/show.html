@@ -1,0 +1,16 @@
+<div class="show-quote">
+<h2 class="show-header">" {{quote.text}} "</h2>
+<h3>Author: {{quote.author}}</h3>
+<div data-ng-repeat="category in tags" class="category-list">
+<button class="btn btn-default search" data-ng-draggable>{{category.title}}</button>
+</div>
+<p class="toggle-modal">Add Tags:<i class="fa fa-tags toggle-modal" aria-hidden="true" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+</i></p>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+    <div data-ng-repeat="category in categories" class="category-list">
+      <button data-ng-if="!quote.category_id" data-dismiss="modal" data-ng-click="newCategory({quote: quote.id, category: category.id})" class="btn btn-default search" type="button">{{category.title}}</button>
+    </div>
+  </div>
+</div>
+</div>
