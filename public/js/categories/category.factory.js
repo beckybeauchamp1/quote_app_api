@@ -10,19 +10,19 @@ console.log('category');
   ]);
 
   function CategoryFactoryFunction($resource){
-    return $resource("https://beckys-quote-app.herokuapp.com/categories/:id", {},
+    return $resource("https://beckys-quote-app.herokuapp.com/categories/:id.json", {},
     {
       update: {
         method: "PUT"
       },
       all:{
         method: "GET",
-        url: "https://beckys-quote-app.herokuapp.com/categories",
+        url: "https://beckys-quote-app.herokuapp.com/categories.json",
         isArray: true
       },
       one: {
         method: "GET",
-        url: "https://beckys-quote-app.herokuapp.com/categories/:id"
+        url: "https://beckys-quote-app.herokuapp.com/categories/:id.json"
       }
     });
   }
