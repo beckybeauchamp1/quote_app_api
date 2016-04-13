@@ -5,9 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+User.destroy_all
+Categorization.destroy_all
 Quote.destroy_all
 Category.destroy_all
+Favorite.destroy_all
 
 require 'json'
 all_quotes = []
@@ -22,3 +24,27 @@ categories = ["Philosophy", "Art", "Life", "Science", "Religion", "Spirtual", "F
 categories.each do |category|
   Category.create!(title: category)
 end
+
+usr1 = User.create!(email:'beckyb@example.com', password:'test12345')
+usr2 = User.create!(email:'beckybeau@example.com', password:'pizzajammy')
+
+
+usr1.favorites.create!({quote: all_quotes[0]});
+usr1.favorites.create!({quote: all_quotes[1]});
+usr1.favorites.create!({quote: all_quotes[2]});
+usr1.favorites.create!({quote: all_quotes[3]});
+usr1.favorites.create!({quote: all_quotes[4]});
+usr1.favorites.create!({quote: all_quotes[5]});
+usr1.favorites.create!({quote: all_quotes[6]});
+usr1.favorites.create!({quote: all_quotes[7]});
+usr1.favorites.create!({quote: all_quotes[8]});
+
+usr2.favorites.create!({quote: all_quotes[0]});
+usr2.favorites.create!({quote: all_quotes[1]});
+usr2.favorites.create!({quote: all_quotes[2]});
+usr2.favorites.create!({quote: all_quotes[3]});
+usr2.favorites.create!({quote: all_quotes[4]});
+usr2.favorites.create!({quote: all_quotes[5]});
+usr2.favorites.create!({quote: all_quotes[6]});
+usr2.favorites.create!({quote: all_quotes[7]});
+usr2.favorites.create!({quote: all_quotes[8]});

@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  mount_devise_token_auth_for 'User', at: 'auth'
+
 
   # custom routes:
   # home/root route goes to quotes index
   # route for searching by keyword
-  get 'quotes/search/:key' => 'quotes#find_matches'
-  # route for searching by author
-  get 'quotes/author/:author' => 'quotes#find_authors'
-
+  get 'quotes/search/:keyword' => 'quotes#find_matches'
+  post 'addCategory' => 'quotes#add_category'
+  get 'quotes/:id/categories' => 'quotes#categories'
+  get 'quotes/favorites' => 'favorites#index'
+  post 'quotes/favorites/new' => 'favorites#create'
   resources :quotes
 
   resources :categories

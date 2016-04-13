@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'devise_token_auth'
+
+gem 'omniauth'
+
 gem 'pry'
 
 gem 'rack-cors', :require => 'rack/cors'
