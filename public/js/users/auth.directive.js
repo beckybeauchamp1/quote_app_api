@@ -12,9 +12,11 @@
         scope.$on('auth:login-success', function(ev, user) {
           scope.currentUser = user;
         });
-
         scope.$on('auth:logout-success', function(ev, user) {
           scope.currentUser = false;
+        });
+        scope.$on('auth:registration-email-success', function(ev, user) {
+          scope.currentUser = user;
         });
 
         // set initial state, for currentUser, when directive is loaded

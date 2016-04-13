@@ -8,10 +8,20 @@
       $auth.submitLogin(this.signinForm)
       .then(function(resp) {
         $state.go('quoteIndex');
-        console.log(Auth._currentUser);
+        console.log("Sucess Login");
       })
       .catch(function(resp) {
         console.log("Signin failure:", resp);
+      });
+    };
+
+    this.signup = function() {
+      $auth.submitRegistration(this.signupForm)
+      .then(function(resp) {
+        $state.go('quoteIndex');
+      })
+      .catch(function(resp) {
+        console.log(resp);
       });
     };
 

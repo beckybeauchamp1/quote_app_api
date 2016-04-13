@@ -106,17 +106,23 @@
       controller: "CategoryIndexController",
       controllerAs: "CategoryIndexViewModel"
     })
+    .state("profile", {
+      url: "/profile",
+      templateUrl: "js/users/profile.html",
+      controller: "FavoritesController",
+      controllerAs: "FavoritesViewModel"
+    })
     .state("signin", {
       url: "/signin",
       templateUrl: "js/users/signin.html",
       controller: "SessionsController",
       controllerAs: "SessionsViewModel"
     })
-    .state("profile", {
-      url: "/profile",
-      templateUrl: "js/users/profile.html",
-      controller: "UsersController",
-      controllerAs: "UsersVM"
+    .state("signup", {
+      url: "/signup",
+      templateUrl: "js/users/signup.html",
+      controller: "SessionsController",
+      controllerAs: "SessionsViewModel"
     })
     .state("signout", {
       url: "/signout",

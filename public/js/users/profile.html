@@ -5,9 +5,9 @@
 </div>
 <button class="btn btn-default results-button">Results: {{results.length}}</button>
 <div class="main-home-div">
-  <div data-ng-draggable class="quote-drag" data-ng-repeat="quote in quotes | filter:searchWord as results" ng-show="$index<6">
+  <div data-ng-draggable class="quote-drag-2" data-ng-repeat="quote in quotes | filter:searchWord as results" ng-show="$index<6">
+    {{quote.id}}
     <p><a data-ui-sref="quoteShow({id: quote.id})">"{{quote.text}}"</a>
-      {{quote}}
     </p>
   </div>
 </div>
