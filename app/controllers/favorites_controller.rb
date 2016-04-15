@@ -10,10 +10,8 @@ class FavoritesController < ApplicationController
   def create
     @favorite = Favorite.new()
     @quote = Quote.find(params[:id])
-    current_user.favorites.create!(quote_id: params[:d])
-    if @favorite.save
-      render status: 200, json: @favorite.to_json
-    end
+    current_user.favorites.create!(quote_id: params[:id])
+    render status: 200, json: @quote.to_json
   end
 
   def update

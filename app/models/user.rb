@@ -6,6 +6,6 @@ class User < ActiveRecord::Base
   has_many :favorites
   has_many :quotes
   has_many :categories
-  has_many :favorites
+  has_many :favorites, inverse_of: :user
   has_many :favorited_quotes, through: :favorites, source: :quote, class_name: "Quote"
 end

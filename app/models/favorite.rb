@@ -1,5 +1,5 @@
 class Favorite < ActiveRecord::Base
   belongs_to :user
   belongs_to :quote
-  validates_uniqueness_of :user_id, :scope => :quote_id
+  validates_uniqueness_of :quote_id, :scope => :user_id
 end

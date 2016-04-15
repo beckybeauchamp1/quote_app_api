@@ -5,7 +5,10 @@
 <button class="btn btn-default search" data-ng-draggable>{{category.title}}</button>
 </div>
 <p class="toggle-modal">Add Tags:<i class="fa fa-tags toggle-modal" aria-hidden="true" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-</i></p>
+</i>
+<div ng-controller="FavoritesController">
+  <a data-ng-click="new({id: quote.id})" class="btn btn-default search add-favorites" type="button">Add to Favorites</a></p>
+</div>
 <div class="collapse" id="collapseExample">
   <div class="well">
     <div data-ng-repeat="category in categories" class="category-list">

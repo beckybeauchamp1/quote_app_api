@@ -3,11 +3,21 @@
     <input type="text" data-ng-model="searchWord" class="form-control search search-input" placeholder="Search to see more...">
   </div>
 </div>
+
+<button class="btn btn-default results-button" data-ui-sref="quoteIndex">Add Favorites</button>
 <button class="btn btn-default results-button">Results: {{results.length}}</button>
-<div class="main-home-div">
-  <div data-ng-draggable class="quote-drag-2" data-ng-repeat="quote in quotes | filter:searchWord as results" ng-show="$index<6">
+<button data-ng-click="changeView()" class="btn btn-default results-button">See All</button>
+<div class="main-home-div favorites">
+  <h2>{{currentUser.first_name}} {{currentUser.last_name}}'s Favorites</h2>
+  <div data-ng-if="!all" data-ng-draggable class="quote-drag-2" data-ng-repeat="quote in quotes | filter:searchWord as results" ng-show="$index<6">
     {{quote.id}}
     <p><a data-ui-sref="quoteShow({id: quote.id})">"{{quote.text}}"</a>
     </p>
   </div>
+    <div data-ng-if="all" dir-paginate="quote in quotes | itemsPerPage: 5" current-page="currentPage" data-ng-draggable class="quote-drag-2" >
+      <p><a data-ui-sref="quoteShow({id: quote.id})">"{{quote.text}}"</a>
+      </p>
+    </div> <br />
+    <dir-pagination-controls></dir-pagination-controls>
+</div>
 </div>

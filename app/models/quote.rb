@@ -3,7 +3,7 @@ class Quote < ActiveRecord::Base
   belongs_to :user
   has_many :categorizations
   has_many :categories, through: :categorizations
-  has_many :favorites
+  has_many :favorites, inverse_of: :quote
   has_many :users, through: :favorites
   # validates :text, uniqueness: true
   # class method, searching by author name and returns and array of every object in postgres that has that author

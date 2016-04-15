@@ -41,7 +41,7 @@ class QuotesController < ApplicationController
       render status: 200, json: @quotes.to_json
     else
       message = {
-        message: "No Results Matching that Author Were Found"
+        message: "No matching results have been Found"
       }
       render status: 200, json: message.to_json
     end

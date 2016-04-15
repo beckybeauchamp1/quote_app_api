@@ -9,7 +9,8 @@
     'ngDraggable',
     'ng-token-auth',
     'users',
-    'signin'
+    'signin',
+    'angularUtils.directives.dirPagination'
   ])
   .config([
     "$stateProvider",
@@ -19,6 +20,9 @@
     '$authProvider',
     AuthConfigFunction
   ])
+  .config(function(paginationTemplateProvider) {
+    paginationTemplateProvider.setPath('dirPagination.tpl.html');
+  })
   .directive('ngDraggable', function($document, $window){
     function makeDraggable(scope, element, attr) {
       var startX = 0;

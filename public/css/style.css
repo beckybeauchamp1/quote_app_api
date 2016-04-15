@@ -18,6 +18,7 @@ nav{
 }
 .main-nav{
   list-style-type: none;
+  margin-right: 10px;
 }
 /*index.html search input and div*/
 .search {
@@ -127,13 +128,14 @@ main{
 }
 footer{
   background-color: rgba(0,0,0,0.7);
-  height: 600px;
+  height: 400px;
   color: white;
   font-size: 40px;
+  margin-top: 400px;
   font-family: 'Quicksand';
 }
 .footer{
-  margin-top: 200px;
+  margin-top: 150px;
 }
 .footer h2{
   font-size: 35px;
@@ -198,23 +200,28 @@ footer{
   margin-left: 20px;
   font-size: 28px;
   margin-top: 40px;
+  margin-bottom: 20px;
 }
 .toggle-modal:hover{
-  color: rgba(182, 191, 10, 0.79);
+  color: rgba(183, 193, 123, 1);
 }
 .modal-content{
-  height: 800px;
-  padding-top: 100px;
+  height: 1200px;
+  padding-top: 50px;
+  font-size: 27px;
+  background-color: white;
+  -moz-box-shadow: 0 0 5px 5px rgba(182, 191, 10, 0.79);;
+  -webkit-box-shadow: 0 0 5px 5px rgba(182, 191, 10, 0.79);;
+  box-shadow: 0 0 5px 5px rgba(182, 191, 10, 0.79);;
 }
 .modal-content h2{
   font-size: 40px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .list li{
   display: block;
-  font-size: 30px;
+  font-size: 28px;
 }
-
 .sign-in{
   background-color: rgba(0,0,0,0.8);
   -moz-box-shadow: 0 0 5px 5px black;
@@ -247,4 +254,26 @@ footer{
 }
 .well button:hover{
   background-color: lemonchiffon;
+}
+.favorites h2{
+  padding-top: 35px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+}
+.pagination li{
+  margin: 0 auto;
+  font-size: 30px;
+  width: 80%;
+}
+.pagination li a{
+  border-radius: 10%;
+}
+.add-favorites{
+  transition: background-color 0.9s ease;
+  background-color: rgba(255,255,255,0.7);
+}
+.add-favorites:hover{
+  box-shadow: 1px 1px 2px black, 0 0 25px rgb(32,178,170), 0 0 5px white;
+  background-color: white;
 }
