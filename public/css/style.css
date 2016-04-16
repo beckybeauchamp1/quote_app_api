@@ -206,16 +206,16 @@ footer{
   color: rgba(183, 193, 123, 1);
 }
 .modal-content{
-  height: 1200px;
-  padding-top: 50px;
-  font-size: 27px;
+  height: 1000px;
+  padding-top: 10px;
+  font-size: 24px;
   background-color: white;
   -moz-box-shadow: 0 0 5px 5px rgba(182, 191, 10, 0.79);;
   -webkit-box-shadow: 0 0 5px 5px rgba(182, 191, 10, 0.79);;
   box-shadow: 0 0 5px 5px rgba(182, 191, 10, 0.79);;
 }
 .modal-content h2{
-  font-size: 40px;
+  font-size: 36px;
   margin-top: 20px;
 }
 .list li{
@@ -227,21 +227,27 @@ footer{
   -moz-box-shadow: 0 0 5px 5px black;
   -webkit-box-shadow: 0 0 5px 5px black;
   box-shadow: 0 0 5px 5px black;
-  height: 600px;
+  height: 700px;
+}
+.sign-in h2{
+  color: white;
+  font-size: 35px;
+  margin-bottom: 25px;
 }
 .sign-in div{
-  padding-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .sign-in label{
-  font-size: 30px;
+  font-size: 25px;
   color: white;
 }
 .sign-in div input{
   height: 40px;
-  width: 25%;
+  width: 40%;
   margin: 0 auto;
   margin-top: 10px;
-  font-size: 30px;
+  font-size: 25px;
 }
 .well{
   background-color: rgba(0,0,0,0);
